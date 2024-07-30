@@ -1,10 +1,10 @@
+import { RefreshControl, ScrollView } from "react-native";
 import React, { useState } from "react";
-import { RefreshControl, ScrollView, StyleSheet } from "react-native";
-import ViewContainer from "../components/ui/layout/view-container";
-import HomeScreenTopContainer from "../components/organisms/home/top-container";
-import StoriesHighlight from "../components/organisms/home/stories-highlight";
+import StoriesHighlight from "../organisms/home/stories-highlight";
+import HomeScreenTopContainer from "../organisms/home/top-container";
+import ViewContainer from "../ui/layout/view-container";
 
-export default function Home() {
+const FeedTimelineTemplate = () => {
 	const [refreshing, setRefreshing] = useState(false);
 	return (
 		<ViewContainer>
@@ -25,6 +25,6 @@ export default function Home() {
 			</ScrollView>
 		</ViewContainer>
 	);
-}
+};
 
-const styles = StyleSheet.create({});
+export default FeedTimelineTemplate;

@@ -26,6 +26,7 @@ import {
 	HankenGrotesk_800ExtraBold_Italic,
 	HankenGrotesk_900Black_Italic,
 } from "@expo-google-fonts/hanken-grotesk";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 // store.dispatch(userApi.endpoints.profile.initiate());
 
@@ -60,15 +61,22 @@ export default function Layout() {
 	if (!fontsLoaded) return null;
 
 	return (
-		<Provider store={store}>
-			<StatusBar barStyle={!dark ? "light-content" : "dark-content"} />
-			<Stack screenOptions={{ headerShown: false }} initialRouteName="index">
-				<Stack.Screen name="[not-found]" />
-				<Stack.Screen name="index" />
-				<Stack.Screen name="profile/index" />
-				<Stack.Screen name="(auth)/login" />
-				<Stack.Screen name="(auth)/signup" />
-			</Stack>
-		</Provider>
+		<SafeAreaProvider>
+			<Provider store={store}>
+				<StatusBar barStyle={!dark ? "light-content" : "dark-content"} />
+				<Stack screenOptions={{ headerShown: false, animation: "fade" }} initialRouteName="(tabs)">
+					<Stack.Screen name="(tabs)" />
+					{/* <Stack.Screen
+						name="story/[id]"
+						options={{ animation: "fade_from_bottom", gestureDirection: "vertical" }}
+					/> */}
+					{/* <TabsLayout /> */}
+					{/* <Stack.Screen name="[not-found]" /> */}
+					{/* <Stack.Screen name="index" /> */}
+					{/* <Stack.Screen name="(auth)/login" /> */}
+					{/* <Stack.Screen name="(auth)/signup" /> */}
+				</Stack>
+			</Provider>
+		</SafeAreaProvider>
 	);
 }

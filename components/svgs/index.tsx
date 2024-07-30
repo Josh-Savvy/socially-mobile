@@ -2,6 +2,7 @@ import React from "react";
 import { G, Path, Svg, type SvgProps } from "react-native-svg";
 
 export interface IconProps extends SvgProps {
+	color?: string;
 	height?: string | number;
 	width?: string | number;
 }

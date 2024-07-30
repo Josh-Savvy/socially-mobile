@@ -9,6 +9,7 @@ const StoriesHighlight = () => {
 	return (
 		<View style={styles.container}>
 			<FlatList
+				initialNumToRender={15}
 				data={stories}
 				extraData={stories}
 				horizontal
@@ -25,5 +26,5 @@ const StoriesHighlight = () => {
 export default StoriesHighlight;
 
 const styles = StyleSheet.create({
-	container: { paddingTop: "10%" },
+	container: { paddingTop: "5%" },
 });
