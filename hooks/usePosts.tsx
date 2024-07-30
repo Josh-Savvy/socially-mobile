@@ -19,6 +19,117 @@ const usePosts = (): ReturnProps => {
 
 const initial_posts: IPost[] = [
 	{
+		content: "driver Accounts Technician Open-source Frozen parse Yen budgetary omnis quas facilis",
+		media: [
+			{
+				id: "436e4dba-9632-48e0-b379-67eb5ec1cc51",
+				type: "gif",
+				url: "https://picsum.photos/seed/lcbXHY8v/640/480",
+			},
+			{
+				id: "f2211e5d-a267-40c2-94a2-f4f13301b435",
+				type: "gif",
+				url: "https://loremflickr.com/640/480?lock=2650756779868160",
+			},
+			{
+				id: "cce9e47b-2ece-4864-8fb1-a914ef49b6da",
+				type: "gif",
+				url: "https://loremflickr.com/640/480?lock=6351271250362368",
+			},
+		],
+		id: "a63b4499-7d55-4e5e-92c8-b887ba1cb5be",
+		createdAt: "2024-07-30T12:16:29.371Z",
+		updatedAt: "2024-07-30T12:16:29.371Z",
+		author: {
+			id: 10,
+			username: "TerranceTorphy780327",
+			first_name: "Terrance",
+			last_name: "Torphy",
+			email: "joshdev@yopmail.com",
+			avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/640.jpg",
+			job_title: "Principal Group Specialist",
+			bio: "iterate 24/365 synergies",
+		},
+		comments: [],
+		reactions: [],
+		views: 0,
+		tagged: [],
+	},
+	{
+		content: "driver Accounts Technician Open-source Frozen parse Yen budgetary omnis quas facilis",
+		media: [
+			{
+				id: "436e4dba-9632-48e0-b379-67eb5ec1cc51",
+				type: "gif",
+				url: "https://picsum.photos/seed/lcbXHY8v/640/480",
+			},
+			{
+				id: "f2211e5d-a267-40c2-94a2-f4f13301b435",
+				type: "gif",
+				url: "https://loremflickr.com/640/480?lock=2650756779868160",
+			},
+			{
+				id: "cce9e47b-2ece-4864-8fb1-a914ef49b6da",
+				type: "gif",
+				url: "https://loremflickr.com/640/480?lock=6351271250362368",
+			},
+		],
+		id: "a63b4499-7d55-4e5e-92c8-b887ba1cb5be",
+		createdAt: "2024-07-30T12:16:29.371Z",
+		updatedAt: "2024-07-30T12:16:29.371Z",
+		author: {
+			id: 10,
+			username: "TerranceTorphy780327",
+			first_name: "Terrance",
+			last_name: "Torphy",
+			email: "joshdev@yopmail.com",
+			avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/640.jpg",
+			job_title: "Principal Group Specialist",
+			bio: "iterate 24/365 synergies",
+		},
+		comments: [],
+		reactions: [],
+		views: 0,
+		tagged: [],
+	},
+	{
+		content: "driver Accounts Technician Open-source Frozen parse Yen budgetary omnis quas facilis",
+		media: [
+			{
+				id: "436e4dba-9632-48e0-b379-67eb5ec1cc51",
+				type: "gif",
+				url: "https://picsum.photos/seed/lcbXHY8v/640/480",
+			},
+			{
+				id: "f2211e5d-a267-40c2-94a2-f4f13301b435",
+				type: "gif",
+				url: "https://loremflickr.com/640/480?lock=2650756779868160",
+			},
+			{
+				id: "cce9e47b-2ece-4864-8fb1-a914ef49b6da",
+				type: "gif",
+				url: "https://loremflickr.com/640/480?lock=6351271250362368",
+			},
+		],
+		id: "a63b4499-7d55-4e5e-92c8-b887ba1cb5be",
+		createdAt: "2024-07-30T12:16:29.371Z",
+		updatedAt: "2024-07-30T12:16:29.371Z",
+		author: {
+			id: 10,
+			username: "TerranceTorphy780327",
+			first_name: "Terrance",
+			last_name: "Torphy",
+			email: "joshdev@yopmail.com",
+			avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/640.jpg",
+			job_title: "Principal Group Specialist",
+			bio: "iterate 24/365 synergies",
+		},
+		comments: [],
+		reactions: [],
+		views: 0,
+		tagged: [],
+	},
+	{
 		id: "f9c4c0b4-a8c8-4794-9c59-7348f6d0b63a",
 		content: "Home PNG Steel CSS Functionality hacking circuit et voluptatem omnis",
 		media: [
@@ -59,6 +170,7 @@ const initial_posts: IPost[] = [
 		reactions: [],
 		author: {
 			id: 10,
+			username: "TerranceTorphy780327",
 			first_name: "Terrance",
 			last_name: "Torphy",
 			email: "joshdev@yopmail.com",
@@ -110,6 +222,8 @@ const initial_posts: IPost[] = [
 		reactions: [],
 		author: {
 			id: 10,
+
+			username: "TerranceTorphy780327",
 			first_name: "Terrance",
 			last_name: "Torphy",
 			email: "joshdev@yopmail.com",
@@ -161,6 +275,8 @@ const initial_posts: IPost[] = [
 		reactions: [],
 		author: {
 			id: 10,
+
+			username: "TerranceTorphy780327",
 			first_name: "Terrance",
 			last_name: "Torphy",
 			email: "joshdev@yopmail.com",
@@ -212,6 +328,7 @@ const initial_posts: IPost[] = [
 		reactions: [],
 		author: {
 			id: 10,
+			username: "TerranceTorphy780327",
 			first_name: "Terrance",
 			last_name: "Torphy",
 			email: "joshdev@yopmail.com",
@@ -263,6 +380,8 @@ const initial_posts: IPost[] = [
 		reactions: [],
 		author: {
 			id: 10,
+
+			username: "TerranceTorphy780327",
 			first_name: "Terrance",
 			last_name: "Torphy",
 			email: "joshdev@yopmail.com",
@@ -314,6 +433,8 @@ const initial_posts: IPost[] = [
 		reactions: [],
 		author: {
 			id: 10,
+
+			username: "TerranceTorphy780327",
 			first_name: "Terrance",
 			last_name: "Torphy",
 			email: "joshdev@yopmail.com",

@@ -12,8 +12,9 @@ const TimelinePosts = ({ handleRefresh, posts }: Props) => {
 		<View style={styles.container}>
 			{posts.map((item, index) => (
 				<View key={index}>
-					{index < posts.length - 1 && <Divider />}
+					<Divider />
 					<PostHighlightCard post={item} />
+					{/* {index === posts.length - 1 && <Divider />} */}
 				</View>
 			))}
 		</View>
