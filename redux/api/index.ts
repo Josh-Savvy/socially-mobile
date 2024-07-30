@@ -3,13 +3,15 @@ import config from "../../config";
 import { getToken } from "../../utils";
 
 const tagTypes = ["PROFILE", "POSTS", "STORIES", "UNAUTHORIZED", "UNKNOWN_ERROR"];
+const baseUrl = config.baseUrl;
 
 export default createApi({
 	reducerPath: "api",
 	baseQuery: fetchBaseQuery({
-		baseUrl: config.baseUrl,
+		baseUrl,
 		prepareHeaders: async (headers, { getState, endpoint }) => {
 			const token = await getToken();
+			console.log({ token });
 			if (token) headers.set("Authorization", `Bearer ${token}`);
 			headers.set("Accept", `*/*`);
 			headers.set("Connection", `keep-alive`);
