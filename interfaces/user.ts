@@ -5,5 +5,5 @@ export default interface IUser {
 	email: string;
 	job_title: string;
 	bio: string;
-	avatar: string;
+	avatar: string | null;
 }

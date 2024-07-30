@@ -3,12 +3,18 @@ import React, { useState } from "react";
 import StoriesHighlight from "../organisms/home/stories-highlight";
 import HomeScreenTopContainer from "../organisms/home/top-container";
 import ViewContainer from "../ui/layout/view-container";
+import TimelinePosts from "../organisms/home/timeline-posts";
+import usePosts from "../../hooks/usePosts";
 
 const FeedTimelineTemplate = () => {
 	const [refreshing, setRefreshing] = useState(false);
+	const { posts, fetchMore } = usePosts();
+
 	return (
-		<ViewContainer>
+		<ViewContainer style={{ paddingHorizontal: 0 }}>
 			<ScrollView
+				showsHorizontalScrollIndicator={false}
+				showsVerticalScrollIndicator={false}
 				refreshControl={
 					<RefreshControl
 						refreshing={refreshing}
@@ -22,6 +28,7 @@ const FeedTimelineTemplate = () => {
 				}>
 				<HomeScreenTopContainer />
 				<StoriesHighlight />
+				<TimelinePosts {...{ posts }} />
 			</ScrollView>
 		</ViewContainer>
 	);

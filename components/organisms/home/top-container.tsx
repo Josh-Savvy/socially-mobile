@@ -13,7 +13,15 @@ const HomeScreenTopContainer = () => {
 	const greeting = useGreeting();
 	const router = useRouter();
 	return (
-		<View style={{ flexDirection: "row", alignItems: "center", width: "100%", justifyContent: "space-between" }}>
+		<View
+			style={{
+				paddingHorizontal: 15,
+				paddingTop: 10,
+				flexDirection: "row",
+				alignItems: "center",
+				width: "100%",
+				justifyContent: "space-between",
+			}}>
 			<Text style={{ color: Colors.white, fontSize: 21, fontFamily: Fonts.HankenGrotesk_600SemiBold }}>
 				{greeting}, {isAuth ? `${user.first_name}.` : "User"}.
 			</Text>

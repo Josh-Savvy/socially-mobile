@@ -66,15 +66,15 @@ export default function Layout() {
 				<StatusBar barStyle={!dark ? "light-content" : "dark-content"} />
 				<Stack screenOptions={{ headerShown: false, animation: "fade" }} initialRouteName="(tabs)">
 					<Stack.Screen name="(tabs)" />
-					{/* <Stack.Screen
+					<Stack.Screen
 						name="story/[id]"
 						options={{ animation: "fade_from_bottom", gestureDirection: "vertical" }}
-					/> */}
-					{/* <TabsLayout /> */}
-					{/* <Stack.Screen name="[not-found]" /> */}
-					{/* <Stack.Screen name="index" /> */}
-					{/* <Stack.Screen name="(auth)/login" /> */}
-					{/* <Stack.Screen name="(auth)/signup" /> */}
+					/>
+					<Stack.Screen
+						name="post/[id]"
+						options={{ animation: "fade_from_bottom", gestureDirection: "vertical" }}
+					/>
+					<Stack.Screen name="[not-found]" />
 				</Stack>
 			</Provider>
 		</SafeAreaProvider>

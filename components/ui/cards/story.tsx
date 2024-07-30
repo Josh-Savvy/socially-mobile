@@ -6,18 +6,13 @@ import { Colors } from "../../../constants/Colors";
 import { Image } from "expo-image";
 import { blurhash } from "../../../utils";
 import { LinearGradient } from "expo-linear-gradient";
+import ImageComponent from "../common/image";
 
 export const StoryHighlightCard = ({ story, onPress }: { story: IStory; onPress?: () => void }) => {
 	return (
 		<TouchableOpacity activeOpacity={0.6} onPress={onPress}>
 			<View style={styles.highlight_container}>
-				<Image
-					style={styles.image}
-					source={story.media?.url}
-					placeholder={{ blurhash }}
-					contentFit="cover"
-					transition={1000}
-				/>
+				<ImageComponent sourceUrl={String(story.media?.url)} transition={600} />
 				<LinearGradient
 					colors={["#0000009a", "#0000000a"]}
 					start={{ x: 0, y: 1 }}
@@ -26,13 +21,7 @@ export const StoryHighlightCard = ({ story, onPress }: { story: IStory; onPress?
 				/>
 				<LinearGradient colors={[Colors.gradient_l, Colors.gradient_r]} style={styles.author_image_container}>
 					<View style={styles.author_image_inner_container}>
-						<Image
-							style={styles.image}
-							source={story.author.avatar}
-							placeholder={{ blurhash }}
-							contentFit="cover"
-							transition={1000}
-						/>
+						<ImageComponent sourceUrl={String(story.author.avatar)} transition={600} />
 					</View>
 				</LinearGradient>
 			</View>

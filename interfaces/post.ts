@@ -2,7 +2,35 @@ import IUser from "./user";
 
 export type MediaType = "image" | "video" | "gif" | "pdf";
 
-export default interface IPost {}
+export default interface IPost {
+	id: string;
+	content: string;
+	media: PostMedia[];
+	createdAt: string;
+	updatedAt: string;
+	comments: Comment[];
+	reactions: any[];
+	author: Partial<IUser>;
+	views: number;
+	tagged: IUser[];
+}
+
+export interface Comment {
+	id: number;
+	text: string;
+	authorId: number;
+	postId: string;
+	reactions: Reaction[];
+}
+
+export type PostReactionType = "like" | "love" | "wow" | "angry" | "sad";
+
+export interface Reaction {
+	id: number;
+	type: PostReactionType;
+	user_id: number;
+	post_id: string;
+}
 
 export interface PostMedia {
 	type: MediaType;

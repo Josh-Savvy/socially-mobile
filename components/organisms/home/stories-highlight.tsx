@@ -26,5 +26,5 @@ const StoriesHighlight = () => {
 export default StoriesHighlight;
 
 const styles = StyleSheet.create({
-	container: { paddingTop: "5%" },
+	container: { paddingTop: "5%", paddingHorizontal: 15 },
 });

@@ -1,11 +1,14 @@
 import { View, Text } from "react-native";
 import React from "react";
+import ViewContainer from "../../components/ui/layout/view-container";
 
 const LoginScreen = () => {
 	return (
-		<View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-			<Text>LoginScreen</Text>
-		</View>
+		<ViewContainer>
+			<View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+				<Text>LoginScreen</Text>
+			</View>
+		</ViewContainer>
 	);
 };
 
