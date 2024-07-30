@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type IUser from "../../interfaces/user";
 import userApi from "../api/user";
+import { RootState } from "../store";
 
-const initialState: IUser | null = null;
+const initialState: IUser | null = null as IUser | null;
 
 const userSlice = createSlice({
 	name: "user-reducer",
@@ -19,3 +20,9 @@ const userSlice = createSlice({
 		);
 	},
 });
+
+export const {} = userSlice.actions;
+
+export const currentUser = (state: RootState) => state.user;
+
+export default userSlice.reducer;

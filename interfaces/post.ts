@@ -9,7 +9,7 @@ export default interface IPost {
 	createdAt: string;
 	updatedAt: string;
 	comments: Comment[];
-	reactions: any[];
+	reactions: Reaction[];
 	author: Partial<IUser>;
 	views: number;
 	tagged: IUser[];

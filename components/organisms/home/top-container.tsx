@@ -6,10 +6,12 @@ import OutlineButton from "../../ui/buttons/outline-button";
 import { MessageIcon, UserIcon } from "../../svgs";
 import Fonts from "../../../constants/Fonts";
 import { useRouter } from "expo-router";
+import { useSelector } from "react-redux";
+import { currentUser } from "../../../redux/reducers/user";
 
 const HomeScreenTopContainer = () => {
-	const isAuth = false;
-	const user = { first_name: "" };
+	const user = useSelector(currentUser);
+	const isAuth = user !== null;
 	const greeting = useGreeting();
 	const router = useRouter();
 	return (
@@ -23,7 +25,7 @@ const HomeScreenTopContainer = () => {
 				justifyContent: "space-between",
 			}}>
 			<Text style={{ color: Colors.white, fontSize: 21, fontFamily: Fonts.HankenGrotesk_600SemiBold }}>
-				{greeting}, {isAuth ? `${user.first_name}.` : "User"}.
+				{greeting}, {isAuth ? `${user.first_name}.` : "Guest"}.
 			</Text>
 			{isAuth ? (
 				<OutlineButton
@@ -54,9 +56,14 @@ const HomeScreenTopContainer = () => {
 				<OutlineButton
 					onPress={() => router.push("/(auth)/login")}
 					borderRadius={50}
-					style={{ padding: 5, paddingHorizontal: 5 }}
+					style={{ padding: 5, paddingHorizontal: 15 }}
 					background="transparent"
-					title={<UserIcon height={22} width={22} />}
+					// title={<UserIcon height={22} width={22} />}
+					title={
+						<Text style={{ fontFamily: Fonts.HankenGrotesk_600SemiBold, color: Colors.white }}>
+							Sign in
+						</Text>
+					}
 				/>
 			)}
 		</View>

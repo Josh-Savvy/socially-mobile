@@ -7,9 +7,9 @@ type Props = { style?: StyleProp<ViewStyle>; children?: ReactNode };
 
 const ViewContainer = ({ style, children, ...props }: Props) => {
 	return (
-		<SafeAreaView style={[styles.container, style]} {...props}>
+		<View style={[styles.container, style]} {...props}>
 			{children}
-		</SafeAreaView>
+		</View>
 	);
 };
 
@@ -18,8 +18,10 @@ export default ViewContainer;
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
+		height: "100%",
 		backgroundColor: Colors.dark_black,
 		color: Colors.white,
 		paddingHorizontal: 15,
+		paddingTop: 50,
 	},
 });

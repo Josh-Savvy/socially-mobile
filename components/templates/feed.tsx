@@ -1,33 +1,26 @@
 import { RefreshControl, ScrollView } from "react-native";
-import React, { useState } from "react";
+import React from "react";
 import StoriesHighlight from "../organisms/home/stories-highlight";
 import HomeScreenTopContainer from "../organisms/home/top-container";
 import ViewContainer from "../ui/layout/view-container";
 import TimelinePosts from "../organisms/home/timeline-posts";
-import usePosts from "../../hooks/usePosts";
+import { useSelector } from "react-redux";
+import { postsState } from "../../redux/reducers/post";
+import { useLazyGetPostsQuery } from "../../redux/api/post";
+import { currentUser } from "../../redux/reducers/user";
 
 const FeedTimelineTemplate = () => {
-	const [refreshing, setRefreshing] = useState(false);
-	const { posts, fetchMore } = usePosts();
-
+	const [fetchPosts, { isLoading }] = useLazyGetPostsQuery();
+	const posts = useSelector(postsState);
+	const user = useSelector(currentUser);
 	return (
 		<ViewContainer style={{ paddingHorizontal: 0 }}>
 			<ScrollView
 				showsHorizontalScrollIndicator={false}
 				showsVerticalScrollIndicator={false}
-				refreshControl={
-					<RefreshControl
-						refreshing={refreshing}
-						onRefresh={() => {
-							setRefreshing(true);
-							setTimeout(function () {
-								setRefreshing(false);
-							}, 2000);
-						}}
-					/>
-				}>
+				refreshControl={<RefreshControl refreshing={isLoading} onRefresh={fetchPosts} />}>
 				<HomeScreenTopContainer />
-				<StoriesHighlight />
+				{user !== null ? <StoriesHighlight /> : <></>}
 				<TimelinePosts {...{ posts }} />
 			</ScrollView>
 		</ViewContainer>
