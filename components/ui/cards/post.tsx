@@ -9,6 +9,7 @@ import { formatNumber, formatPostTimestamp } from "../../../utils";
 import { BookmarkIcon, CommentIcon, ShareIcon, VeticalEllipsisIcon } from "../../svgs";
 import ReactionIcons from "../../svgs/reaction-icons";
 import usePostActions from "../../../hooks/usePostActions";
+import { Link } from "expo-router";
 
 export const PostHighlightCard = ({ post }: { post: IPost }) => {
 	const router = useRouter();
@@ -90,7 +91,7 @@ export const PostHighlightCard = ({ post }: { post: IPost }) => {
 						contentContainerStyle={{ alignSelf: "center", justifyContent: "center", alignItems: "center" }}
 						keyExtractor={({ id }, index) => `${id}:${index}`}
 						renderItem={({ item }) => (
-							<TouchableOpacity activeOpacity={0.3} onPress={() => router.push(`/post/${post.id}`)}>
+							<>
 								<View
 									style={{
 										overflow: "hidden",
@@ -102,7 +103,7 @@ export const PostHighlightCard = ({ post }: { post: IPost }) => {
 									}}>
 									<ImageComponent sourceUrl={item.url} style={{ backgroundColor: "#444" }} />
 								</View>
-							</TouchableOpacity>
+							</>
 						)}
 					/>
 				) : (

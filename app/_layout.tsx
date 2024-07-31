@@ -55,6 +55,7 @@ export default function Layout() {
 		HankenGrotesk_900Black_Italic,
 	});
 
+
 	useEffect(() => {
 		if (fontsLoaded || error) SplashScreen.hideAsync();
 	}, [fontsLoaded, error]);
@@ -66,15 +67,19 @@ export default function Layout() {
 				<StatusBar barStyle={!dark ? "light-content" : "dark-content"} />
 				<Stack screenOptions={{ headerShown: false, animation: "fade" }} initialRouteName="(tabs)">
 					<Stack.Screen name="(tabs)" />
+					<Stack.Screen name="+not-found" />
+					<Stack.Screen
+						name="view-image/index"
+						options={{ animation: "fade", gestureDirection: "vertical" }}
+					/>
 					<Stack.Screen
 						name="story/[id]"
 						options={{ animation: "fade_from_bottom", gestureDirection: "vertical" }}
 					/>
 					<Stack.Screen
 						name="post/[id]"
-						options={{ animation: "fade_from_bottom", gestureDirection: "vertical" }}
+						options={{ animation: "slide_from_bottom", gestureDirection: "vertical" }}
 					/>
-					<Stack.Screen name="[not-found]" />
 				</Stack>
 			</Provider>
 		</SafeAreaProvider>

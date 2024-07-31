@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import useGreeting from "../../../hooks/useGreeting";
 import { Colors } from "../../../constants/Colors";
-import OutlineButton from "../../ui/buttons/outline-button";
+import { OutlineButton } from "../../ui/buttons";
 import { MessageIcon, UserIcon } from "../../svgs";
 import Fonts from "../../../constants/Fonts";
 import { useRouter } from "expo-router";
